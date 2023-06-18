@@ -1,0 +1,90 @@
+{
+	"BUILD_DIR" : "C:/qt-projects/chat-client-core/chat-client-core/build/chat-client-core_autogen",
+	"CMAKE_BINARY_DIR" : "C:/qt-projects/chat-client-widgets/build-chat-client-widgets-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/qt-projects/chat-client-core/chat-client-core/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/qt-projects/chat-client-core/chat-client-core",
+	"CMAKE_EXECUTABLE" : "C:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"C:/qt-projects/chat-client-core/chat-client-core/CMakeLists.txt",
+		"C:/Qt/Tools/QtCreator-7.0.0/share/qtcreator/package-manager/auto-setup.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5Config.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "C:/qt-projects/chat-client-widgets/chat-client-widgets",
+	"DEP_FILE" : "C:/qt-projects/chat-client-core/chat-client-core/build/chat-client-core_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "chat-client-core_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"C:/qt-projects/chat-client-core/chat-client-core/chat-client-core_global.h",
+			"MU",
+			"EWIEGA46WW/moc_chat-client-core_global.cpp",
+			null
+		],
+		[
+			"C:/qt-projects/chat-client-core/chat-client-core/chatclientcore.h",
+			"MU",
+			"EWIEGA46WW/moc_chatclientcore.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/qt-projects/chat-client-core/chat-client-core/build/chat-client-core_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/qt-projects/chat-client-core/chat-client-core/build/chat-client-core_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"CHATCLIENTCORE_LIBRARY",
+		"QT_CORE_LIB",
+		"WIN32",
+		"chat_client_core_EXPORTS"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"C:/qt-projects/chat-client-core/chat-client-core/build",
+		"C:/qt-projects/chat-client-core/chat-client-core",
+		"C:/Qt/5.15.2/msvc2019_64/include",
+		"C:/Qt/5.15.2/msvc2019_64/include/QtCore",
+		"C:/Qt/5.15.2/msvc2019_64/mkspecs/win32-msvc"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "C:/qt-projects/chat-client-core/chat-client-core/build/CMakeFiles/chat-client-core_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Qt/5.15.2/msvc2019_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "C:/Qt/5.15.2/msvc2019_64/bin/uic.exe",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "C:/qt-projects/chat-client-core/chat-client-core/build/CMakeFiles/chat-client-core_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/qt-projects/chat-client-core/chat-client-core/chatclientcore.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}

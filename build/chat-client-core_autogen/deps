@@ -1,0 +1,12 @@
+chat-client-core_autogen/timestamp: \
+	C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5Config.cmake \
+	C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake \
+	C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake \
+	C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake \
+	C:/Qt/5.15.2/msvc2019_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
+	C:/Qt/Tools/QtCreator-7.0.0/share/qtcreator/package-manager/auto-setup.cmake \
+	C:/qt-projects/chat-client-core/chat-client-core/CMakeLists.txt \
+	C:/qt-projects/chat-client-core/chat-client-core/chat-client-core_global.h \
+	C:/qt-projects/chat-client-core/chat-client-core/chatclientcore.cpp \
+	C:/qt-projects/chat-client-core/chat-client-core/chatclientcore.h \
+	C:/Program\ Files/CMake/bin/cmake.exe
