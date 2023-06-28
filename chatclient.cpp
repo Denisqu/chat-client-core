@@ -2,6 +2,7 @@
 #include <QDataStream>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include <QHostAddress>
 
 ChatClient::ChatClient(QObject *parent)
     : QObject(parent)
@@ -57,6 +58,7 @@ void ChatClient::disconnectFromHost()
 }
 void ChatClient::connectToServer(const QHostAddress &address, quint16 port)
 {
+    qDebug() << "connecting to server: " << address.toString() << port;
     m_clientSocket->connectToHost(address, port);
 }
 
@@ -64,6 +66,7 @@ void ChatClient::jsonReceived(const QJsonObject &docObj)
 {
     // actions depend on the type of message
     const QJsonValue typeVal = docObj.value(QLatin1String("type"));
+    qDebug() << "json type = " << typeVal;
     if (typeVal.isNull() || !typeVal.isString())
         return; // a message with no type was received so we just ignore it
     if (typeVal.toString().compare(QLatin1String("login"), Qt::CaseInsensitive) == 0) { //It's a login message
@@ -87,11 +90,12 @@ void ChatClient::jsonReceived(const QJsonObject &docObj)
         // we extract the text field containing the chat text
         const QJsonValue textVal = docObj.value(QLatin1String("text"));
         // we extract the sender field containing the username of the sender
-        const QJsonValue senderVal = docObj.value(QLatin1String("sender"));
+        //const QJsonValue senderVal = docObj.value(QLatin1String("sender"));
+        const QJsonValue senderVal = "sender";
         if (textVal.isNull() || !textVal.isString())
             return; // the text field was invalid so we ignore
-        if (senderVal.isNull() || !senderVal.isString())
-            return; // the sender field was invalid so we ignore
+        //if (senderVal.isNull() || !senderVal.isString())
+           //return; // the sender field was invalid so we ignore
         // we notify a new message was received via the messageReceived signal
         emit messageReceived(senderVal.toString(), textVal.toString());
     } else if (typeVal.toString().compare(QLatin1String("newuser"), Qt::CaseInsensitive) == 0) { // A user joined the chat
@@ -113,6 +117,8 @@ void ChatClient::jsonReceived(const QJsonObject &docObj)
 
 void ChatClient::onReadyRead()
 {
+    qDebug() << "ready read...";
+
     // prepare a container to hold the UTF-8 encoded JSON we receive from the socket
     QByteArray jsonData;
     // create a QDataStream operating on the socket
@@ -133,10 +139,14 @@ void ChatClient::onReadyRead()
             const QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData, &parseError);
             if (parseError.error == QJsonParseError::NoError) {
                 // if the data was indeed valid JSON
-                if (jsonDoc.isObject()) // and is a JSON object
-                    jsonReceived(jsonDoc.object()); // parse the JSON
+                if (jsonDoc.isObject()) { // and is a JSON object
+                    qDebug() << "received json: " << jsonDoc;
+                    jsonReceived(jsonDoc.object());
+                }   // parse the JSON
+                else
+                    qDebug() << "isnt a json object";
             } else {
-                //break; TODO: нужен ли тут брейк???!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                break; //TODO: нужен ли тут брейк???!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             }
             // loop and try to read more JSONs if they are available
         } else {
